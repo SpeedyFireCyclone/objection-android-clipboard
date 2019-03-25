@@ -1,0 +1,30 @@
+{
+  "name": "clipboard-objection",
+  "version": "0.0.1",
+  "description": "Objection plugin to monitor the Android clipboard.",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "frida-compile src/index.ts -o ./index.js -c",
+    "watch": "frida-compile src/index.ts -o ./index.js -w -c",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "author": "Leon Jacobs & Remco Hofman",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "frida-java": "^2",
+    "frida-objc": "^3",
+    "frida-screenshot": "^2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7",
+    "@babel/plugin-transform-runtime": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/runtime-corejs2": "^7",
+    "@types/node": "^10.14",
+    "frida-compile": "^8",
+    "frida-gum-types": "^4",
+    "tslint": "^5"
+  }
+}
