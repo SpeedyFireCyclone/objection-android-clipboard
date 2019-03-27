@@ -14,7 +14,7 @@ class ClipboardPlugin(Plugin):
                 }
             }
         })
-        self._inject()
+        self.inject()
 
     def monitor(self, args: list = None) -> None:
         """
